@@ -1,0 +1,22 @@
+diff -Nur ditz-0.1.orig/bin/ditz ditz-0.1.nogems/bin/ditz
+--- ditz-0.1.orig/bin/ditz	2008-04-02 09:29:54.000000000 -0600
++++ ditz-0.1.nogems/bin/ditz	2008-04-02 15:41:50.000000000 -0600
+@@ -1,6 +1,5 @@
+ #!/usr/bin/env ruby
+ 
+-require 'rubygems'
+ require 'trollop'; include Trollop
+ require "ditz"
+ 
+diff -Nur ditz-0.1.orig/lib/operator.rb ditz-0.1.nogems/lib/operator.rb
+--- ditz-0.1.orig/lib/operator.rb	2008-04-02 09:07:59.000000000 -0600
++++ ditz-0.1.nogems/lib/operator.rb	2008-04-02 15:42:23.000000000 -0600
+@@ -382,7 +382,7 @@
+     f = Tempfile.new("ditz")
+     f.puts data.to_yaml
+     f.close
+-    editor = ENV["EDITOR"] || "/usr/bin/vi"
++    editor = ENV["EDITOR"] || "vi"
+     cmd = "#{editor} #{f.path.inspect}"
+     Ditz::debug "running: #{cmd}"
+ 

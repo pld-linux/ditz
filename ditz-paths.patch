@@ -1,0 +1,53 @@
+diff -Nur ditz-0.1.orig/lib/ditz.rb ditz-0.1.paths/lib/ditz.rb
+--- ditz-0.1.orig/lib/ditz.rb	2008-04-02 09:07:59.000000000 -0600
++++ ditz-0.1.paths/lib/ditz.rb	2008-04-02 15:39:15.000000000 -0600
+@@ -9,5 +9,5 @@
+ 
+ end
+ 
+-require 'model-objects'
+-require 'operator'
++require 'ditz/model-objects'
++require 'ditz/operator'
+diff -Nur ditz-0.1.orig/lib/lowline.rb ditz-0.1.paths/lib/lowline.rb
+--- ditz-0.1.orig/lib/lowline.rb	2008-03-30 21:32:34.000000000 -0600
++++ ditz-0.1.paths/lib/lowline.rb	2008-04-02 15:39:15.000000000 -0600
+@@ -1,4 +1,4 @@
+-require 'util'
++require 'ditz/util'
+ 
+ class Numeric
+   def to_pretty_s
+diff -Nur ditz-0.1.orig/lib/model-objects.rb ditz-0.1.paths/lib/model-objects.rb
+--- ditz-0.1.orig/lib/model-objects.rb	2008-04-02 10:26:35.000000000 -0600
++++ ditz-0.1.paths/lib/model-objects.rb	2008-04-02 15:39:15.000000000 -0600
+@@ -1,4 +1,4 @@
+-require 'model'
++require 'ditz/model'
+ 
+ module Ditz
+ 
+diff -Nur ditz-0.1.orig/lib/model.rb ditz-0.1.paths/lib/model.rb
+--- ditz-0.1.orig/lib/model.rb	2008-03-30 21:32:34.000000000 -0600
++++ ditz-0.1.paths/lib/model.rb	2008-04-02 15:39:34.000000000 -0600
+@@ -1,6 +1,6 @@
+ require 'yaml'
+-require "lowline"; include Lowline
+-require "util"
++require "ditz/lowline"; include Lowline
++require "ditz/util"
+ require 'sha1'
+ 
+ module Ditz
+diff -Nur ditz-0.1.orig/lib/operator.rb ditz-0.1.paths/lib/operator.rb
+--- ditz-0.1.orig/lib/operator.rb	2008-04-02 09:07:59.000000000 -0600
++++ ditz-0.1.paths/lib/operator.rb	2008-04-02 15:39:15.000000000 -0600
+@@ -1,7 +1,7 @@
+ require 'tempfile'
+ require 'fileutils'
+ 
+-require "html"
++require "ditz/html"
+ 
+ module Ditz
+ 
